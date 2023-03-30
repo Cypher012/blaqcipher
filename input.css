@@ -1,0 +1,253 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    width: 100vw;
+    scroll-behavior: smooth;
+  }
+
+  header {
+    width: 100%;
+    height: 50rem;
+    overflow-y: hidden;
+  }
+
+  nav .logo {
+    width: 12rem;
+  }
+  .header .navbar.active {
+    right: 2rem;
+    transition: 0.4s linear;
+  }
+
+  .hero {
+    animation: hero 3s ease 0s 1 normal forwards;
+  }
+
+  @keyframes hero {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero img {
+    width: 45rem;
+  }
+
+  .hero .content1::after {
+    content: "\a";
+    white-space:pre ;
+  }
+
+  .features-second-grid svg {
+    transition: all 700ms;
+  }
+  .features-second-grid:hover .features-border {
+    transition: all 700ms;
+  }
+
+  .features-second-grid:hover svg {
+    color: #186de5;
+  }
+
+  .features-second-grid:hover .features-border {
+    background-color: #fff;
+  }
+
+  
+
+
+  .serviceBox {
+    box-shadow: -4px -4px 47px -2px rgba(186, 186, 186, 0.75);
+  }
+
+  .serviceBox h2 {
+    transition-duration: 700ms;
+  }
+
+  .serviceBox h2:hover {
+    color: #186de5;
+  }
+
+  #bg-video {
+    background-color: rgba(0, 0, 0, 0.523);
+    background-blend-mode: darken;
+    height: 20rem;
+  }
+
+  #bg-video .circle {
+    transition-duration: 200ms;
+  }
+
+  #bg-video .circle:hover {
+    background-color: #fff;
+  }
+
+  #bg-video .circle:hover svg {
+    color: #186de5;
+  }
+
+  .teamBox:hover .bg-fa {
+    background-color: rgba(255, 255, 255, 0.75);
+    background-blend-mode: lighten;
+  }
+
+  .teamBox i {
+    display: none;
+    font-size: 2.5rem;
+    color: #2b38c2;
+  }
+
+  .teamBox:hover i {
+    display: block;
+    transition-duration: 300ms;
+  }
+
+  .teamBox .i-set a:nth-child(1) i:hover {
+    color: #1f286c;
+  }
+  .teamBox .i-set a:nth-child(2) i:hover {
+    color: #1da1f2;
+  }
+  .teamBox .i-set a:nth-child(3) i:hover {
+    color: #e4405f;
+  }
+
+  
+
+  .count-box span::before {
+    content: "";
+    position: absolute;
+    top: 3.5rem;
+    left: 0.7rem;
+    height: 1px;
+    width: 80%;
+    background-color: #fff;
+  }
+
+  .count-box {
+    background-color: #ffffff1b;
+  }
+  .card {
+    box-shadow: -4px -4px 47px -2px rgba(186, 186, 186, 0.75);
+  }
+
+  .card-body ul {
+    line-height: 3rem;
+  }
+
+  .card-body .btn {
+    padding: 1rem 3rem;
+    border-radius: 35px;
+    font-size: 0.9rem;
+  }
+
+  .hide img {
+    transition-duration: 1s;
+  }
+
+  .hide:hover img {
+    transform: scale(1.2);
+    filter: brightness(30%);
+  }
+
+  .show {
+    opacity: 0;
+    transition-duration: 500ms;
+  }
+  .hide:hover .show {
+    opacity: 1;
+  }
+
+  #works button {
+    transition-duration: 500ms;
+    color: #fff;
+    background-color: #2062e6;
+  }
+
+  #works button:hover {
+    background-color: rgb(32, 32, 32);
+  }
+
+  #works button:focus {
+    background-color: transparent;
+    border: 1px solid #2062e6;
+    color: #2062e6;
+  }
+
+  #form ::placeholder{
+    font-size: 0.85rem;
+  }
+
+  footer .icon:nth-child(1):hover{
+    background-color: #186de5;
+
+  }
+
+    footer .icon:nth-child(2):hover{
+    background-color: #1da1f2;
+
+  }
+
+    footer .icon:nth-child(3):hover{
+    background-color: #e4405f;
+  }
+
+  footer .icon:nth-child(4):hover{
+    background-color:  #1f286c;
+  }
+
+
+   footer .icon:hover i{
+    color: #fff;
+
+  }
+
+  
+
+
+
+
+
+
+  @media screen and (min-width: 320px) and (max-width: 640px) {
+    header {
+      margin-bottom: 3rem;
+      height: 45rem;
+      overflow-y: hidden;
+    }
+
+     .hero .content1::after {
+    content: "";
+    
+  }
+  }
+}
+
+@layer components {
+  .btn {
+    @apply my-10  bg-blue-700 uppercase text-white  border-black transition 
+     duration-700 hover:bg-gray-900 cursor-pointer;
+  }
+
+  .serviceBox {
+    @apply w-auto h-auto;
+  }
+
+  .count-box {
+    @apply w-90 sm:w-100 md:w-72 lg:w-96  xl:w-64  2xl:w-80  h-auto;
+  }
+
+  .card {
+    @apply w-auto h-auto;
+  }
+}
